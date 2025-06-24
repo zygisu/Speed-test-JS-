@@ -12,7 +12,7 @@ A web-based speed typing test that allows users to measure their typing speed an
   - Total mistakes
   - Accuracy (%)
   - Progress over time (history table)
-  - Judgement (Better/Worse/Same compared to previous attempt)
+  - Judgement 
 - Keyboard shortcuts:
   - **Enter**: Restart test
   - **Escape**: Return to main menu
@@ -60,16 +60,16 @@ The file must contain an array of non-empty strings, for example:
 
 A sample file is provided at [V2/Mock Json inputs/quotes.json](V2/Mock%20Json%20inputs/quotes.json).
 
-## File Structure
+### 🏗️ Architecture Overview
 
-- [V2/index.html](V2/index.html): Main HTML file
-- [V2/styles.css](V2/styles.css): Stylesheet
-- [V2/JS code/main.js](V2/JS%20code/main.js): Entry point, module setup
-- [V2/JS code/ui.js](V2/JS%20code/ui.js): UI overlay logic
-- [V2/JS code/typing.js](V2/JS%20code/typing.js): Typing logic and event handling
-- [V2/JS code/fileinput.js](V2/JS%20code/fileinput.js): JSON file input logic
-- [V2/JS code/stats.js](V2/JS%20code/stats.js): Statistics and history logic
-- [V2/Mock Json inputs/quotes.json](V2/Mock%20Json%20inputs/quotes.json): Example custom quotes file
+#### **Core Modules:**
+- **`main.js`** - Application bootstrapper and module coordinator
+- **`typing.js`** - Handles typing logic, timer, and user input processing
+- **`dataService.js`** - Manages data fetching from API and JSON files
+- **`stats.js`** - Calculates WPM, accuracy, and performance judgements
+- **`ui.js`** - Controls overlay displays and UI state management
+- **`fileinput.js`** - Handles custom quote uploads via JSON files
+- **`constants.js`** - Centralizes DOM element IDs and configuration
 
 ## Important!  
 
